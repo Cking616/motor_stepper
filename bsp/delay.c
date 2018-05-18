@@ -9,13 +9,13 @@
 #include "delay.h"
 #include "driverlib/rom.h"
 
-void delay_ms(int ms)
+inline void delay_ms(int ms)
 {
     int num = ms  * 40000;
     ROM_SysCtlDelay(num);
 }
 
-void delay_s(int s)
+inline void delay_s(int s)
 {
     int i = 0;
     for(i = 0; i < s; i++)

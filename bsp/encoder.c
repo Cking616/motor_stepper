@@ -59,20 +59,20 @@ void encoder_init()
     HWREG(GPIO_PORTF_BASE + GPIO_O_LOCK) = 0;
 }
 
-int encoder_get_speed()
+inline int encoder_get_speed()
 {
     int dir = QEIDirectionGet(QEI0_BASE);
     return dir * ROM_QEIVelocityGet(QEI0_BASE);
 }
 
 //*****************************************************************************
-int encoder_get_value()
+inline int encoder_get_value()
 {
     int reslv =  ROM_QEIPositionGet( QEI0_BASE );
     return _encoder_dir * reslv;
 }
 
-void encoder_reset()
+inline void encoder_reset()
 {
     ROM_QEIPositionSet( QEI0_BASE, 0 );
 }

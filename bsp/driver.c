@@ -112,7 +112,7 @@ void driver_init_hardware(void)
     ROM_SysTickPeriodSet(80000);  // every 1mSec, @ 80Mhz
 }
 
-int driver_get_address(void)
+inline int driver_get_address(void)
 {
     return _address;
 }

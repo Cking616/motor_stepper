@@ -39,7 +39,7 @@ PWM1IntHandler(void)
     if(_count == 1000)
     {
         _count = 0;
-        //UARTprintf("Out 1000!\n");
+        UARTprintf("out 1000!\n");
     }
 }
 

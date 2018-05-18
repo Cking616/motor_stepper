@@ -23,7 +23,7 @@ int main()
         distance_thread();
 
         //Prints out the distance measured.
-        UARTprintf("dis: %2dcm \n" , distance_get_dis());
+        //UARTprintf("dis: %2dcm \n" , distance_get_dis());
 
         //wait about 10ms until the next reading.
         delay_ms(10);
